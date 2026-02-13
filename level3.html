@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web Dev Mini-Quest</title>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <span id="badge" class="badge text-bg-primary">
+                <i class="bi bi-bar-chart-steps me-1">  
+                </i>
+                level 1
+                </span>
+              <h2 class="h4 mt-2"><strong>JavaScript: level Up </strong></h2>
+               <p id="text" class="text-muted">Click the button to increase the level number. </p>
+               <button id="levelbtn" class="btn btn-success w-100 mb-3">
+               <i class="bi bi-arrow-up-circle-fill me-1"></i>
+               <svg class="bi bi-arrow-up" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" clip-rule="evenodd"></path>
+               <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8 3.707 5.354 6.354a.5.5 0 1 1-.708-.708l3-3z" clip-rule="evenodd"></path>
+               </svg>level up
+            </button>
+                <div class="d-flex gap-2">
+                <button class="btn btn-secondary w-50" onclick="window.location.href= 'level2.html'">
+                <i class="bi bi-arrow-left"></i> Back
+                <button class="btn btn-dark w-50" onclick="window.location.href='level4.html'">Next level
+                <i class="bi bi-arrow-right"></i>
+                </div>
+            </div>
+          </div>
+          <script>let currentlevel = 1;
+
+              const badge =document.getElementById("badge");
+              const text = document.getElementById("text");
+              const levelbtn = document.getElementById("levelbtn");
+
+                levelbtn.addEventListener("click",function
+                () {
+                  if(currentlevel < 6)currentlevel++;
+
+                    badge.innerHTML = '<i class="bi bi-chart-steps me-1"></i> level' + currentlevel;
+    
+                    text.innerHTML = '<i class="bi bi-arrow-up-circle-fill me-1"></i> congrats you got level up to level: ' + currentlevel;
+                     });
+            </script>
+          <p class=" text-center text-muted small mt-3 mb-0">Screenshot #3: Click "level Up" first, then screenshot (badges should change). </p>
+        </div>
+      </div>
+  </body>
+</html>
